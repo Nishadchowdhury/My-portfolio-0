@@ -4,6 +4,7 @@ import './Home.scss';
 import avatar from '../../Utils/img/avatar.jpg';
 import AnimatedLetters from '../Animation/Font';
 import NavBarTop from '../Shared/NavBarTop';
+import What_i_do from '../Others/What_i_do';
 
 const Home = () => {
 
@@ -14,14 +15,11 @@ const Home = () => {
     return (
         <>
 
-
             <div className=' flex justify-center items-center' >
-
-
                 <div className='bg-zinc-800 lg:my-12 lg:w-[90%] w-full min-h-[200px] lg:rounded-[2.5rem]  ' >
                     <NavBarTop />
 
-                    <div className="flex justify-center lg:flex-row flex-col lg:px-16 px-6 my-14 ">
+                    <div className="flex justify-center lg:flex-row flex-col lg:pr-16 px-6 my-14 ">
 
 
                         <div className='lg:w-2/5  flex items-center justify-center  ' >
@@ -52,23 +50,25 @@ const Home = () => {
                             </p>
 
                             <div className=' mt-4 lg:mx-0 mx-auto ' >
-                                <button className='btn  border-2 border-r-0 border-blue-500 px-4 py-2 rounded-full rounded-r-none transition-all active:opacity-70 ' >
-                                    <span className='active:scale-95 inline-block ' >Download Resume</span>
+                                <button className='btn  border-2 border-r-0 border-blue-500  rounded-full rounded-r-none transition-all active:opacity-70 ' >
+                                    <span className='active:scale-95 inline-block px-4 py-2 ' >Download Resume</span>
                                 </button>
 
-                                <button className='btn border-2  border-l-0 border-blue-200 px-4 py-2 rounded-full rounded-l-none  transition-all active:opacity-70 ' >
-                                    <span className='active:scale-95 inline-block ' >Contact</span>
+                                <button className='btn border-2  border-l-0 border-blue-200 rounded-full rounded-l-none  transition-all active:opacity-70 ' >
+                                    <span className='active:scale-95 inline-block px-4 py-2 ' >Contact</span>
                                 </button>
                             </div>
-
                         </div>
-
                     </div>
 
+
+
+                    <What_i_do />
+
+
                 </div>
-
-
             </div>
+
         </>
     );
 };
