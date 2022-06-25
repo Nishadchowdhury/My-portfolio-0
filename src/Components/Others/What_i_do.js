@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { } from '@fortawesome/free-solid-svg-icons'
+
 
 const What_i_do = () => {
     return (
@@ -10,7 +13,7 @@ const What_i_do = () => {
 
                 <div className='' >
                     <span className='inline-block' >
-
+                        <i>  </i>
                     </span>
 
                     <p>
