@@ -1,24 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Components/Home/Home';
+
+
 
 function App() {
+
+  const bg = 'https://lmpixels.com/wp/leven-wp/dark/wp-content/uploads/sites/4/2019/12/main_bg_14.png'
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div id='app-home' className=' min-h-screen bg-blue-500 '
+
+        style={{
+          backgroundImage: "url(" + bg + ")",
+          backgroundColor: 'blue',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed'
+        }} >
+
+
+        <Home />
+
+
+      </div >
+
+    </>
   );
 }
 
