@@ -4,7 +4,7 @@ import './Home.scss';
 import avatar from '../../Utils/img/avatar.jpg';
 import AnimatedLetters from '../Animation/Font';
 import NavBarTop from '../Shared/NavBarTop';
-import What_i_do from '../Others/What_i_do';
+import What_i_do from '../Others/What_i_do/What_i_do';
 
 const Home = () => {
 

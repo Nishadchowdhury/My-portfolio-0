@@ -1,0 +1,23 @@
+.whatIDo {
+    &::after {
+
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 45px;
+        border-bottom: 3px solid var(--MyBlue);
+        left: 25%;
+        transform: translateX(-50%);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 32px;
+        border-bottom: 3px solid var(--MyGray);
+        left: 81%;
+        transform: translateX(-50%);
+    }
+
+}
