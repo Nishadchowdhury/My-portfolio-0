@@ -41,12 +41,15 @@ h2 {
 // }
 
 
-.home_div {
+#home_div {
     transition-property: min-height;
     transition-duration: 2s;
-    min-height: 50vh;
+}
 
-    &:hover {
-        min-height: 100vh;
-    }
+.h_i {
+    min-height: 50vh;
+}
+
+.h_f {
+    min-height: 100vh;
 }

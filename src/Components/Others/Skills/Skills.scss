@@ -1,0 +1,14 @@
+.tagcloud {
+    display: inline-block;
+    top: 100px;
+    left: 32%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    // font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+/* Change color of each text in sphere on hover   */
+.tagcloud--item:hover {
+    color: #FFC300;
+}

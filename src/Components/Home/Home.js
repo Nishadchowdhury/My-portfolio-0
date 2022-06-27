@@ -6,21 +6,15 @@ import AnimatedLetters from '../Animation/Font';
 import NavBarTop from '../Shared/NavBarTop';
 import What_i_do from '../Others/What_i_do/What_i_do';
 import My_projects from '../Others/Projects/My_projects';
+import Skills from '../Others/Skills/Skills';
 const Home = () => {
 
     const [showMore, setShowmore] = useState(0);
-
-    // // const handleScroll = () => {
-    // //     const position = window.pageYOffset;
-    // //     setShowmore(position);
-    // // };
-
-    // // window.addEventListener('', handleScroll);
-
+    const [hover, setHover] = useState(0);
 
 
     const showRest = () => {
-
+        setHover(1);
         setTimeout(() => {
             setShowmore(100)
         }, 2000);
@@ -36,12 +30,10 @@ const Home = () => {
         <>
 
             <div className=' flex justify-center  items-center  ' >
-                <div id='home_div' onMouseEnter={showRest} className='home_div bg-zinc-800 lg:my-12 lg:w-[90%] w-full lg:rounded-[2.5rem]  ' >
+                <div id='home_div' onMouseEnter={showRest} className={` bg-zinc-800 lg:my-12 lg:w-[90%] w-full lg:rounded-[2.5rem]  ${hover ? "h_f" : "h_i"} `} >
                     <div
 
                     >
-
-
                         <NavBarTop />
 
                         <div
@@ -94,6 +86,9 @@ const Home = () => {
 
                                 <What_i_do />
                                 <My_projects />
+
+
+                                <Skills />
 
                             </>}
                         </div>
