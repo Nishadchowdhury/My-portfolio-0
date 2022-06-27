@@ -39,3 +39,14 @@ h2 {
 //     }
 
 // }
+
+
+.home_div {
+    transition-property: min-height;
+    transition-duration: 2s;
+    min-height: 50vh;
+
+    &:hover {
+        min-height: 100vh;
+    }
+}

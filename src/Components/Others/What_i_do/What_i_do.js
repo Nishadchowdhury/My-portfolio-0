@@ -7,7 +7,7 @@ import './What_i_do.scss'
 
 const What_i_do = () => {
     return (
-        <div className='lg:px-16 px-6 text-white my-10' >
+        <div className='lg:px-16 px-6 text-white my-10 transition-all' >
             <div className=' lg:block flex  '> <h1 className='whatIDo mx-auto relative pb-2 border-blue-400 inline-block text-center ' >What i do</h1> </div>
 
 
