@@ -1,0 +1,13 @@
+.box {
+    width: 400px;
+    height: 500px;
+    background: #000;
+    background-size: cover;
+    border-radius: 10px;
+    background-position: top;
+    transition: all 1s;
+
+    &:hover {
+        background-position: bottom;
+    }
+}

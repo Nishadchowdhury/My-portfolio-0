@@ -1,6 +1,7 @@
 import React from 'react';
 import BgSvg from '../../../Utils/img/bg.svg'
 import data from '../../../Utils/Database/WebSiteData.js'
+import './My_projects.scss'
 
 
 const My_projects = () => {
@@ -9,9 +10,19 @@ const My_projects = () => {
 
         return (
             <div className={"_project" + JSON.stringify(idx)}>
-                <div className='max-h-[500px] mx-auto overflow-y-auto max-w-[400px] opacity-60 hover:opacity-100 duration-300 ' >
+                <div className=' lg:block hidden grayscale hover:grayscale-0 projectTag h-[500px] mx-auto overflow-y-auto rounded-xl w-[400px] opacity-60 hover:opacity-100 duration-300 ' >
+                    <div className='box'
+                        style={{
+                            backgroundImage: "url(" + img + ")",
+                        }}
+                    ></div>
+                </div>
+
+                <div className=' lg:hidden projectTag max-h-[500px] mx-auto overflow-y-auto rounded-xl max-w-[400px] opacity-60 hover:opacity-100 duration-300 ' >
                     <img className='' src={img} alt="" />
                 </div>
+
+
             </div>
         )
     }
@@ -19,6 +30,7 @@ const My_projects = () => {
 
     return (
         <div
+
             style={{
                 backgroundImage: "url(" + BgSvg + ")",
 
@@ -79,7 +91,6 @@ const My_projects = () => {
                 </div>
 
             </div>
-
 
 
         </div>

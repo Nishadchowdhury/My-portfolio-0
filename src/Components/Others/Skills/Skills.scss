@@ -17,6 +17,11 @@
     overflow: hidden;
     color: rgb(65, 65, 255);
     height: 450px;
+    width: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
     @for $i from 2 through 20 {
@@ -24,30 +29,92 @@
             display: none;
         }
     }
-
-
-    // &:nth-child(2) {
-    //     display: none;
-    // }
-
-    // &:nth-child(2) {
-    //     display: none;
-    // }
-
-    // &:nth-child(3) {
-    //     display: none;
-    // }
-
-    // &:nth-child(4) {
-    //     display: none;
-    // }
-
-    // &:nth-child(5) {
-    //     display: none;
-    // }
-
 }
 
 .tagcloud>.tagcloud>.tagcloud {
     display: none;
+}
+
+
+
+.skill_bar {
+    padding: 25px 30px;
+    box-shadow: rgba(0, 0, 0, 0.2);
+
+
+    .bar {
+        margin: 20px 0;
+
+        &:first-child {
+            margin-top: 0px;
+        }
+
+        .info {
+            margin-top: 5px;
+        }
+
+        .info span {
+            font-style: 17px;
+            font-weight: 500;
+        }
+
+        .progress-line {
+            height: 10px;
+            width: 100%;
+            background: rgb(255, 255, 255);
+            position: relative;
+            border-radius: 10px;
+
+
+            span {
+                height: 100%;
+                // width: 80%;
+                background: #6665ee;
+                position: absolute;
+                border-radius: 10px;
+                transform: scale(0);
+                transform-origin: left;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    height: 0;
+                    width: 0;
+                    right: 0;
+                    top: -10px;
+                    border: 7px solid transparent;
+                    border-right-width: 0px;
+                    border-bottom-width: 0px;
+                    border-top-color: rgb(0, 0, 0);
+
+                }
+
+                &::after {
+                    position: absolute;
+                    right: 0;
+                    top: -35px;
+                }
+            }
+        }
+
+    }
+
+
+
+}
+
+.animate {
+    animation: animate 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+@for $i from 1 through 10 {
+    .animate#{$i} {
+        animation-delay: #{$i / 7}s;
+    }
+}
+
+@keyframes animate {
+    100% {
+        transform: scale(1);
+    }
 }

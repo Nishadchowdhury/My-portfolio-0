@@ -11,6 +11,8 @@ const Home = () => {
 
     const [showMore, setShowmore] = useState(0);
     const [hover, setHover] = useState(0);
+    const [MySkillAnimate, setMySkillAnimate] = useState(false);
+
 
 
     const showRest = () => {
@@ -37,7 +39,7 @@ const Home = () => {
                         <NavBarTop />
 
                         <div
-
+                            onMouseLeave={() => setMySkillAnimate(true)}
                             className="flex justify-center lg:flex-row flex-col lg:pr-16 px-6 my-14 ">
 
 
@@ -85,10 +87,14 @@ const Home = () => {
                             {showMore && <>
 
                                 <What_i_do />
+
+                                <hr className=' mx-auto w-[94%]' />
+
+                                <Skills MySkillAnimate={MySkillAnimate} />
+
                                 <My_projects />
 
 
-                                <Skills />
 
                             </>}
                         </div>

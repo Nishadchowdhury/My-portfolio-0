@@ -3,6 +3,7 @@
     opacity: 0;
     animation: bounceIn 1s 1s;
     animation-fill-mode: forwards;
+    min-width: 10px;
 }
 
 @for $i from 1 through 40 {

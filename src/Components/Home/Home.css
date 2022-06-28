@@ -1,0 +1,86 @@
+.ok {
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h2 {
+  color: white;
+  font-weight: 400;
+}
+
+.fadeIn_1 {
+  opacity: 0;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fadeIn_2 {
+  opacity: 0;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fadeIn_3 {
+  opacity: 0;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fadeIn_4 {
+  opacity: 0;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fadeIn_5 {
+  opacity: 0;
+  -webkit-animation: fadeIn;
+          animation: fadeIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#home_div {
+  -webkit-transition-property: min-height;
+  transition-property: min-height;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.h_i {
+  min-height: 50vh;
+}
+
+.h_f {
+  min-height: 100vh;
+}

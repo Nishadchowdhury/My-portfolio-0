@@ -1,0 +1,21 @@
+.whatIDo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 45px;
+  border-bottom: 3px solid var(--MyBlue);
+  left: 25%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.whatIDo::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 32px;
+  border-bottom: 3px solid var(--MyGray);
+  left: 81%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
