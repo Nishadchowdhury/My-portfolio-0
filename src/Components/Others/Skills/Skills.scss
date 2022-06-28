@@ -1,8 +1,7 @@
+/* Applying CSS to sphere */
 .tagcloud {
     display: inline-block;
-    top: 100px;
-    left: 32%;
-    font-weight: bold;
+    // font-weight: bold;
     letter-spacing: 1px;
     // font-family: 'Bebas Neue', cursive;
     font-size: 20px;
@@ -10,5 +9,45 @@
 
 /* Change color of each text in sphere on hover   */
 .tagcloud--item:hover {
-    color: #FFC300;
+    // color: #FFC300;
+}
+
+.tagcloud {
+
+    overflow: hidden;
+    color: rgb(65, 65, 255);
+    height: 450px;
+
+
+    @for $i from 2 through 20 {
+        &:nth-child(#{$i}) {
+            display: none;
+        }
+    }
+
+
+    // &:nth-child(2) {
+    //     display: none;
+    // }
+
+    // &:nth-child(2) {
+    //     display: none;
+    // }
+
+    // &:nth-child(3) {
+    //     display: none;
+    // }
+
+    // &:nth-child(4) {
+    //     display: none;
+    // }
+
+    // &:nth-child(5) {
+    //     display: none;
+    // }
+
+}
+
+.tagcloud>.tagcloud>.tagcloud {
+    display: none;
 }
