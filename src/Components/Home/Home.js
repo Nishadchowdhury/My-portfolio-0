@@ -4,15 +4,20 @@ import './Home.scss';
 import avatar from '../../Utils/img/avatar.jpg';
 import AnimatedLetters from '../Animation/Font';
 import NavBarTop from '../Shared/NavBarTop';
-import What_i_do from '../Others/What_i_do/What_i_do';
-import My_projects from '../Others/Projects/My_projects';
+import WHAT_I_DO from '../Others/What_i_do/What_i_do';
+import MY_PROJECTS from '../Others/Projects/My_projects';
 import Skills from '../Others/Skills/Skills';
+import AboutMe from '../Others/AboutMe/AboutMe';
+import Footer from '../Others/Footer/Footer';
+import MyLocation from '../Others/MyLocation/MyLocation';
+import ContactMe from '../Others/ContactMe/ContactMe';
 const Home = () => {
 
     const [showMore, setShowmore] = useState(0);
     const [hover, setHover] = useState(0);
     const [MySkillAnimate, setMySkillAnimate] = useState(false);
 
+    const NextDay = new Date().getDate() + 1;
 
 
     const showRest = () => {
@@ -31,7 +36,7 @@ const Home = () => {
     return (
         <>
 
-            <div className=' flex justify-center  items-center  ' >
+            <div id='home' className=' flex justify-center  items-center  ' >
                 <div id='home_div' onMouseEnter={showRest} className={` bg-zinc-800 lg:my-12 lg:w-[90%] w-full lg:rounded-[2.5rem]  ${hover ? "h_f" : "h_i"} `} >
                     <div
 
@@ -86,16 +91,23 @@ const Home = () => {
                         <div className={`${!showMore && "hidden"}`}>
                             {showMore && <>
 
-                                <What_i_do />
+                                < WHAT_I_DO />
 
                                 <hr className=' mx-auto w-[94%]' />
 
                                 <Skills MySkillAnimate={MySkillAnimate} />
 
-                                <My_projects />
+                                <MY_PROJECTS />
 
 
+                                <MyLocation />
 
+                                <AboutMe />
+
+                                <ContactMe />
+
+
+                                <Footer />
                             </>}
                         </div>
 

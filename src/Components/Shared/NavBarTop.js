@@ -8,10 +8,12 @@ const NavBarTop = () => {
             <div> <span className="inline-block p-3 h-16 "> <img className='h-full' src={whiteLogo} alt="" /> </span></div>
             <div>
                 <span className="inline-block h-9 p-3 ">Home</span>
-                <span className="inline-block h-9 p-3 ">Home</span>
-                <span className="inline-block h-9 p-3 ">Home</span>
-                <span className="inline-block h-9 p-3 ">Home</span>
-                <span className="inline-block h-9 p-3 ">Home</span></div>
+                <a href='/#what_i_do' className="inline-block h-9 p-3 ">Services</a>
+                <a href='/#Skills' className="inline-block h-9 p-3 ">Skills</a>
+                <a href='/#My_project' className="inline-block h-9 p-3 ">My project</a>
+
+
+            </div>
         </div>
     );
 };

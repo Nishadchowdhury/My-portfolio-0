@@ -1,4 +1,4 @@
-const siteArray =
+export const siteArray =
 
     [
         {
@@ -24,4 +24,36 @@ const siteArray =
 
     ]
 
-export default siteArray; 
+export const skillData = [
+    {
+        SkillName: 'React',
+        Knowledge: '70%',
+        UsedIn: 12,
+        SVG: '../SVG/mongoDB.svg'
+    },
+
+    {
+        SkillName: 'MongoDB',
+        Knowledge: '60%',
+        UsedIn: 6,
+        SVG: ''
+
+    },
+
+    {
+        SkillName: 'Tailwind',
+        Knowledge: '70%',
+        UsedIn: 5,
+        SVG: ''
+    },
+
+    {
+        SkillName: 'React',
+        Knowledge: '70%',
+        UsedIn: 5,
+        SVG: ''
+    },
+
+]
+
+

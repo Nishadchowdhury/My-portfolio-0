@@ -1,6 +1,6 @@
 import React from 'react';
 import BgSvg from '../../../Utils/img/bg.svg'
-import data from '../../../Utils/Database/WebSiteData.js'
+import { siteArray, skillData } from '../../../Utils/Database/WebSiteData.js'
 import './My_projects.scss'
 
 
@@ -29,7 +29,7 @@ const My_projects = () => {
 
 
     return (
-        <div
+        <div id='My_project'
 
             style={{
                 backgroundImage: "url(" + BgSvg + ")",
@@ -51,14 +51,16 @@ const My_projects = () => {
 
 
                     {
-                        data.map(({ Name, liveLink, img }, i) => {
+                        siteArray.map(({ Name, liveLink, img }, i) => {
 
                             if ((JSON.parse(i) + 1) % 2 !== 0) {
-                                return (
 
-                                    <SingleSite img={img} liveLink={liveLink} Name={Name} key={i} idx={i} />
-                                )
+                                return <SingleSite img={img} liveLink={liveLink} Name={Name} key={i} idx={i} />
+
+                            } else {
+                                return ""
                             }
+
                         })
                     }
 
@@ -70,16 +72,15 @@ const My_projects = () => {
 
 
                     {
-                        data.map(({ img, liveLink, Name, }, i) => {
+                        siteArray.map(({ img, liveLink, Name, }, i) => {
 
                             if ((JSON.parse(i) + 1) % 2 === 0) {
-                                return (
-                                    <SingleSite img={img} liveLink={liveLink} Name={Name} key={i} idx={i} />
-                                )
-                            } else {
-                                return
-                            }
 
+                                return (<SingleSite img={img} liveLink={liveLink} Name={Name} key={i} idx={i} />)
+
+                            } else {
+                                return ""
+                            }
 
 
                         })

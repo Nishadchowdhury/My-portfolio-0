@@ -36,7 +36,7 @@ const Skills = ({ MySkillAnimate }) => {
 
     return (
         <>
-            <div className=' flex mt-10 justify-between lg:flex-row flex-col '>
+            <div id='Skills' className=' flex mt-10 justify-between lg:flex-row flex-col '>
 
                 <div className='lg:w-1/2 w-full border-red-400 Border  flex flex-col justify-center items-center ' >
                     <h2 className='text-white text-5xl font-extrabold  block text-start' > <AnimatedLetters idx={15} letterClass={'text-animate'} strArray={SkillHeadAr} /> </h2>
@@ -91,7 +91,7 @@ const Skills = ({ MySkillAnimate }) => {
                 </div>
 
                 <div className='lg:w-1/2 w-full flex justify-center items-center '  >
-                    <div className="tag cloud"></div>
+                    <div className="tagcloud"></div>
                 </div>
 
             </div>
