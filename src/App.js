@@ -1,6 +1,7 @@
 import 'animate.css';
 import Home from './Components/Home/Home';
 import { Routes, Route, Link } from "react-router-dom";
+import 'aos/dist/aos.css';
 
 function App() {
 

@@ -1,0 +1,29 @@
+.textIn {
+
+    border-color: var(--MyGray);
+
+}
+
+.textInput .textIn {
+    background-color: var(--MyBg);
+
+    &:focus {
+        border-color: var(--MyBlue);
+    }
+}
+
+.textInput .textIn:focus~span,
+.textInput .textIn:valid~span {
+
+    color: var(--MyBlue);
+    transform: translateX(15px) translateY(-10px);
+
+    font-size: 0.95rem;
+    padding: 0px 10px;
+    background-color: var(--MyBg);
+
+    border-left: 1px solid var(--MyBlue);
+    border-right: 1px solid var(--MyBlue);
+
+
+}

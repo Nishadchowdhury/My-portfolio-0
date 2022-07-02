@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import AnimatedLetters from '../../Animation/Font';
 import './Skills.scss'
-const Skills = ({ MySkillAnimate }) => {
+import { skillData } from '../../../Utils/Database/WebSiteData'
+
+
+const Skills = () => {
 
     const options = {
         radius: 180,
@@ -27,13 +30,22 @@ const Skills = ({ MySkillAnimate }) => {
 
     }, [])
 
-
+    const barParent = 'skill_bar '
 
     const SkillHeadAr = ['M', 'y', ' ', 'S', 'k', 'i', 'l', 'l', 's'];
 
-    const barParent = 'skill_bar '
+    console.log(skillData);
 
+    // Knowledge,: "70%"
+    // SVG,: "../SVG/mongoDB.svg"
+    // SkillName,: "React"
+    // UsedIn,: 12
 
+    const z = `
+    '&::after': {
+        content: "kola gas"
+    }
+    `
     return (
         <>
             <div id='Skills' className=' flex mt-10 justify-between lg:flex-row flex-col '>
@@ -44,47 +56,34 @@ const Skills = ({ MySkillAnimate }) => {
 
                     <div className="lg:w-4/5 w-full text-white">
 
-                        <div className={barParent}>
-                            <div className="bar">
-                                <div className="info">
-                                    <span className=' ' >HTMl</span>
-                                </div>
-                                <div className="progress-line "> <span className=' animate animate1 w-[80%] after:content-["80%"] after:bg-black after:py-px after:px-2 after:rounded-md after:rounded-br-none after:-top-12  '   ></span> </div>
-                            </div>
-                        </div>
+                        {
+                            skillData.map(({ Knowledge, SVG, SkillName, UsedIn }) => {
+
+                                return (<div className={barParent}>
+                                    <div className="bar">
+                                        <div className="info">
+                                            <span className=' ' >{SkillName}</span>
+                                        </div>
+                                        <div className="progress-line "> <span
+                                            style={{
+                                                width: `${Knowledge + '%'}`,
+                                            }}
+                                            className={`animate animate1  `}   >
+
+                                            <h3 className='inline-block absolute right-0 -top-[30px]  rounded-br-none text-white border-[1px] bg-black rounded-lg px-1 ' > {Knowledge + "%"}</h3>
+                                        </span>
+
+                                        </div>
+                                    </div>
+                                </div>)
+
+                            })
 
 
 
-                        <div className={barParent}>
-                            <div className="bar">
-                                <div className="info">
-                                    <span>Bootstrap</span>
-                                </div>
-                                <div className="progress-line "> <span className=' animate animate2 w-[80%] after:content-["80%"] after:bg-black after:py-px after:px-2 after:rounded-md after:rounded-br-none after:-top-12  '   ></span> </div>
-                            </div>
-                        </div>
 
+                        }
 
-
-                        <div className={barParent}>
-                            <div className="bar">
-                                <div className="info">
-                                    <span>CSS</span>
-                                </div>
-                                <div className="progress-line "> <span className=' animate animate3 w-[80%] after:content-["80%"] after:bg-black after:py-px after:px-2 after:rounded-md after:rounded-br-none after:-top-12  '   ></span> </div>
-                            </div>
-                        </div>
-
-
-
-                        <div className={barParent}>
-                            <div className="bar">
-                                <div className="info">
-                                    <span>JavaScript</span>
-                                </div>
-                                <div className="progress-line "> <span className=' animate animate4  w-[70%] after:content-["70%"] after:bg-black after:py-px after:px-2 after:rounded-md after:rounded-br-none after:-top-12  '   ></span> </div>
-                            </div>
-                        </div>
 
                     </div>
 

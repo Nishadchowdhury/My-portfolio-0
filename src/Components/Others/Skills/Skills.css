@@ -1,0 +1,233 @@
+/* Applying CSS to sphere */
+.tagcloud {
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+/* Change color of each text in sphere on hover   */
+.tagcloud {
+  overflow: hidden;
+  color: #4141ff;
+  height: 450px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tagcloud:nth-child(2) {
+  display: none;
+}
+
+.tagcloud:nth-child(3) {
+  display: none;
+}
+
+.tagcloud:nth-child(4) {
+  display: none;
+}
+
+.tagcloud:nth-child(5) {
+  display: none;
+}
+
+.tagcloud:nth-child(6) {
+  display: none;
+}
+
+.tagcloud:nth-child(7) {
+  display: none;
+}
+
+.tagcloud:nth-child(8) {
+  display: none;
+}
+
+.tagcloud:nth-child(9) {
+  display: none;
+}
+
+.tagcloud:nth-child(10) {
+  display: none;
+}
+
+.tagcloud:nth-child(11) {
+  display: none;
+}
+
+.tagcloud:nth-child(12) {
+  display: none;
+}
+
+.tagcloud:nth-child(13) {
+  display: none;
+}
+
+.tagcloud:nth-child(14) {
+  display: none;
+}
+
+.tagcloud:nth-child(15) {
+  display: none;
+}
+
+.tagcloud:nth-child(16) {
+  display: none;
+}
+
+.tagcloud:nth-child(17) {
+  display: none;
+}
+
+.tagcloud:nth-child(18) {
+  display: none;
+}
+
+.tagcloud:nth-child(19) {
+  display: none;
+}
+
+.tagcloud:nth-child(20) {
+  display: none;
+}
+
+.tagcloud > .tagcloud > .tagcloud {
+  display: none;
+}
+
+.skill_bar {
+  padding: 25px 30px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2);
+          box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.skill_bar .bar {
+  margin: 20px 0;
+}
+
+.skill_bar .bar:first-child {
+  margin-top: 0px;
+}
+
+.skill_bar .bar .info {
+  margin-top: 5px;
+}
+
+.skill_bar .bar .info span {
+  font-style: 17px;
+  font-weight: 500;
+}
+
+.skill_bar .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: white;
+  position: relative;
+  border-radius: 10px;
+}
+
+.skill_bar .bar .progress-line span {
+  height: 100%;
+  background: #6665ee;
+  position: absolute;
+  border-radius: 10px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.skill_bar .bar .progress-line span::before {
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  right: 0;
+  top: -10px;
+  border: 7px solid transparent;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-top-color: black;
+}
+
+.skill_bar .bar .progress-line span::after {
+  position: absolute;
+  right: 0;
+  top: -35px;
+}
+
+.animate {
+  -webkit-animation: animate 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+          animation: animate 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
+.animate1 {
+  -webkit-animation-delay: 0.14286s;
+          animation-delay: 0.14286s;
+}
+
+.animate2 {
+  -webkit-animation-delay: 0.28571s;
+          animation-delay: 0.28571s;
+}
+
+.animate3 {
+  -webkit-animation-delay: 0.42857s;
+          animation-delay: 0.42857s;
+}
+
+.animate4 {
+  -webkit-animation-delay: 0.57143s;
+          animation-delay: 0.57143s;
+}
+
+.animate5 {
+  -webkit-animation-delay: 0.71429s;
+          animation-delay: 0.71429s;
+}
+
+.animate6 {
+  -webkit-animation-delay: 0.85714s;
+          animation-delay: 0.85714s;
+}
+
+.animate7 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.animate8 {
+  -webkit-animation-delay: 1.14286s;
+          animation-delay: 1.14286s;
+}
+
+.animate9 {
+  -webkit-animation-delay: 1.28571s;
+          animation-delay: 1.28571s;
+}
+
+.animate10 {
+  -webkit-animation-delay: 1.42857s;
+          animation-delay: 1.42857s;
+}
+
+@-webkit-keyframes animate {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes animate {
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}

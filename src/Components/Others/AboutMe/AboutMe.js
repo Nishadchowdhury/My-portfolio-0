@@ -6,7 +6,7 @@ const AboutMe = () => {
     const AboutHeader = ['M', 'e', ' ', '&', ' ', 'M', 'y', ' ', 'S', 'e', 'l', 'f'];
 
     return (
-        <div id='aboutMe' className='flex justify-center' >
+        <div id='aboutMe' className='flex justify-center mt-10' >
 
             <div className='w-4/5' >
                 <div className='text-3xl text-white flex justify-center' >

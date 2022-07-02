@@ -27,14 +27,14 @@ export const siteArray =
 export const skillData = [
     {
         SkillName: 'React',
-        Knowledge: '70%',
+        Knowledge: '70',
         UsedIn: 12,
         SVG: '../SVG/mongoDB.svg'
     },
 
     {
         SkillName: 'MongoDB',
-        Knowledge: '60%',
+        Knowledge: '60',
         UsedIn: 6,
         SVG: ''
 
@@ -42,14 +42,14 @@ export const skillData = [
 
     {
         SkillName: 'Tailwind',
-        Knowledge: '70%',
+        Knowledge: '70',
         UsedIn: 5,
         SVG: ''
     },
 
     {
         SkillName: 'React',
-        Knowledge: '70%',
+        Knowledge: '70',
         UsedIn: 5,
         SVG: ''
     },

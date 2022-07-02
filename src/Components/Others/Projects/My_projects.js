@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import BgSvg from '../../../Utils/img/bg.svg'
-import { siteArray, skillData } from '../../../Utils/Database/WebSiteData.js'
+import { siteArray } from '../../../Utils/Database/WebSiteData.js'
 import './My_projects.scss'
+import AOS from 'aos';
 
 
 const My_projects = () => {
 
+    useEffect(() => {
+        AOS.init();
+    })
+
     const SingleSite = ({ Name, img, liveLink, idx }) => {
 
         return (
-            <div className={"_project" + JSON.stringify(idx)}>
+            <div className={"_project" + JSON.stringify(idx)}
+                data-aos="fade-up"
+            >
                 <div className=' lg:block hidden grayscale hover:grayscale-0 projectTag h-[500px] mx-auto overflow-y-auto rounded-xl w-[400px] opacity-60 hover:opacity-100 duration-300 ' >
                     <div className='box'
                         style={{

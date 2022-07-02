@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faAtom } from '@fortawesome/free-solid-svg-icons'
 import './What_i_do.scss'
+import AOS from 'aos';
 
 
 const What_i_do = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
+
     return (
         <div id='what_i_do' className='lg:px-16 px-6 text-white my-10 transition-all' >
             <div className=' lg:block flex  '> <h1 className='whatIDo mx-auto relative pb-2 border-blue-400 inline-block text-center ' >What i do</h1> </div>
@@ -13,7 +20,9 @@ const What_i_do = () => {
 
             <div className='lg:grid lg:grid-cols-2 gap-4'>
 
-                <div className='flex ' >
+                <div className='flex '
+                    data-aos="fade-in"
+                >
                     <span className='inline-block text-blue-500 text-3xl m-4  ' >
                         <FontAwesomeIcon icon={faGlobe} />
                     </span>
@@ -24,7 +33,9 @@ const What_i_do = () => {
                     </p>
                 </div>
 
-                <div className='flex ' >
+                <div className='flex '
+                    data-aos="fade-in"
+                >
                     <span className='inline-block text-blue-500 text-3xl m-4  ' >
                         <FontAwesomeIcon icon={faAtom} />
                     </span>

@@ -11,6 +11,7 @@ const NavBarTop = () => {
                 <a href='/#what_i_do' className="inline-block h-9 p-3 ">Services</a>
                 <a href='/#Skills' className="inline-block h-9 p-3 ">Skills</a>
                 <a href='/#My_project' className="inline-block h-9 p-3 ">My project</a>
+                <a href='/#contactMe' className="inline-block h-9 p-3 ">Contact</a>
 
 
             </div>

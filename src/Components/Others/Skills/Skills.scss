@@ -75,25 +75,25 @@
                 transform: scale(0);
                 transform-origin: left;
 
-                &::before {
-                    position: absolute;
-                    content: '';
-                    height: 0;
-                    width: 0;
-                    right: 0;
-                    top: -10px;
-                    border: 7px solid transparent;
-                    border-right-width: 0px;
-                    border-bottom-width: 0px;
-                    border-top-color: rgb(0, 0, 0);
+                // &::before {
+                //     position: absolute;
+                //     content: '';
+                //     height: 0;
+                //     width: 0;
+                //     right: 0;
+                //     top: -10px;
+                //     border: 7px solid transparent;
+                //     border-right-width: 0px;
+                //     border-bottom-width: 0px;
+                //     border-top-color: rgb(0, 0, 0);
 
-                }
+                // }
 
-                &::after {
-                    position: absolute;
-                    right: 0;
-                    top: -35px;
-                }
+                // &::after {
+                //     position: absolute;
+                //     right: 0;
+                //     top: -35px;
+                // }
             }
         }
 
