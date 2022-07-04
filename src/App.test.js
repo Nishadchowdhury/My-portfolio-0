@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+const ok = [
+  {
+    kola: [12, 12, 121, 212, 1212],
+    sola: [1212, 12121, 12121, 21, 2, 12, 12, 12121]
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+  }
+]
+
+
+console.log(ok);

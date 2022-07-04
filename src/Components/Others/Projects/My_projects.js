@@ -18,15 +18,17 @@ const My_projects = () => {
                 data-aos="fade-up"
             >
                 <div className=' lg:block hidden grayscale hover:grayscale-0 projectTag h-[500px] mx-auto overflow-y-auto rounded-xl w-[400px] opacity-60 hover:opacity-100 duration-300 ' >
-                    <div className='box'
+                    <a href={liveLink} target={"_blank"} rel="noreferrer" className='box block'
                         style={{
                             backgroundImage: "url(" + img + ")",
                         }}
-                    ></div>
+                    > </a>
                 </div>
 
-                <div className=' lg:hidden projectTag max-h-[500px] mx-auto overflow-y-auto rounded-xl max-w-[400px] opacity-60 hover:opacity-100 duration-300 ' >
-                    <img className='' src={img} alt="" />
+                <div className='p-3' >
+                    <div data-aos="fade-in" className=' lg:px-0  lg:hidden scale-95  projectTag max-h-[500px] mx-auto overflow-y-auto rounded-xl max-w-[400px] duration-300 ' >
+                        <a href={liveLink} target={"_blank"} rel="noreferrer" > <img className='' src={img} alt="" /></a>
+                    </div>
                 </div>
 
 

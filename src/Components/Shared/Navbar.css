@@ -1,0 +1,79 @@
+.navigation__icon {
+    width: 45px;
+    height: 44px;
+    display: block;
+    position: relative;
+    top: 3%;
+    left: 35%;
+    background: var(--MyBlue)(312, 51%, 41%, 0.0);
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(.9, 0, .33, 1.3);
+}
+
+.topBar {
+    width: 45px;
+    height: 2px;
+    display: block;
+    background: var(--MyGray);
+    position: absolute;
+    top: 10px;
+    transform: rotate(0);
+    transition: all 300ms cubic-bezier(.9, 0, .33, 1.3);
+}
+
+.middleBar {
+    width: 45px;
+    height: 2px;
+    display: block;
+    background: var(--MyGray);
+    position: absolute;
+    top: 20px;
+    transform: rotate(0);
+    transition: all 300ms cubic-bezier(.9, 0, .33, 1.3);
+}
+
+.bottomBar {
+    width: 35px;
+    height: 2px;
+    display: block;
+    background: var(--MyGray);
+    position: absolute;
+    top: 30px;
+    transform: rotate(0);
+    transition: all 300ms cubic-bezier(.9, 0, .33, 1.3);
+}
+
+
+.topBarRotate {
+    width: 45px;
+    height: 2px;
+    display: block;
+    background: var(--MyBlue);
+    position: absolute;
+    top: 19px;
+    transform: rotate(45deg);
+    transition: all 300ms cubic-bezier(.9, 0, .33, 1.3);
+}
+
+.middleBarRotate {
+    width: 45px;
+    height: 2px;
+    display: block;
+    background: var(--MyBlue);
+    position: absolute;
+    top: 20px;
+    transform: rotate(0);
+    opacity: 0;
+    transition: all 300ms cubic-bezier(.9, 0, .33, 1.3);
+}
+
+.bottomBarRotate {
+    width: 45px;
+    height: 2px;
+    display: block;
+    background: var(--MyBlue);
+    position: absolute;
+    top: 19px;
+    transform: rotate(-45deg);
+    transition: all 300ms cubic-bezier(.9, 0, .33, 1.3);
+}

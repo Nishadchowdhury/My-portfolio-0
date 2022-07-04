@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import AnimatedLetters from '../../Animation/Font';
 import './Skills.scss'
 import { skillData } from '../../../Utils/Database/WebSiteData'
-
-
 const Skills = () => {
 
     const options = {
@@ -34,18 +32,6 @@ const Skills = () => {
 
     const SkillHeadAr = ['M', 'y', ' ', 'S', 'k', 'i', 'l', 'l', 's'];
 
-    console.log(skillData);
-
-    // Knowledge,: "70%"
-    // SVG,: "../SVG/mongoDB.svg"
-    // SkillName,: "React"
-    // UsedIn,: 12
-
-    const z = `
-    '&::after': {
-        content: "kola gas"
-    }
-    `
     return (
         <>
             <div id='Skills' className=' flex mt-10 justify-between lg:flex-row flex-col '>
@@ -57,9 +43,9 @@ const Skills = () => {
                     <div className="lg:w-4/5 w-full text-white">
 
                         {
-                            skillData.map(({ Knowledge, SVG, SkillName, UsedIn }) => {
+                            skillData.map(({ Knowledge, SVG, SkillName, UsedIn }, i) => {
 
-                                return (<div className={barParent}>
+                                return (<div key={i} className={barParent}>
                                     <div className="bar">
                                         <div className="info">
                                             <span className=' ' >{SkillName}</span>
@@ -70,18 +56,13 @@ const Skills = () => {
                                             }}
                                             className={`animate animate1  `}   >
 
-                                            <h3 className='inline-block absolute right-0 -top-[30px]  rounded-br-none text-white border-[1px] bg-black rounded-lg px-1 ' > {Knowledge + "%"}</h3>
+                                            <h3 className='inline-block absolute right-0 -top-[30px] rounded-br-none text-gray-400 border-blue-400 border-[1px] bg-[#27272A] rounded-lg px-1 ' > {Knowledge + "%"}</h3>
                                         </span>
 
                                         </div>
                                     </div>
                                 </div>)
-
                             })
-
-
-
-
                         }
 
 

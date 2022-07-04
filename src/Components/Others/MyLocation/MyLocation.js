@@ -3,12 +3,14 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import bgContact from '../../../Utils/img/sendEmailBg.svg'
 import './MyLocation.scss'
 import AOS from 'aos';
+import emailjs from 'emailjs-com'
+import { toast } from 'react-toastify';
 
 const containerStyle = {
     width: '100%',
     height: '100%',
-    borderRadius: '16px'
-
+    borderRadius: '16px',
+    // margin: 'auto'
 };
 
 const center = {
@@ -16,6 +18,7 @@ const center = {
     lng: 91.313477
 };
 
+console.log(process.env.REACT_APP_MAP_API);
 
 function MyComponent() {
 
@@ -23,14 +26,30 @@ function MyComponent() {
         AOS.init();
     }, [])
 
+
     const SendEmail = e => {
         e.preventDefault();
 
-        const name = e.target.name.value;
-        const email = e.target.email.value;
-        const message = e.target.message.value;
+        // const name = e.target.name.value;
+        // const email = e.target.email.value;
+        // const message = e.target.message.value;
 
-        console.log(name, email, message,);
+        // console.log(name, email, message,);
+
+        emailjs.init()
+
+        emailjs.sendForm(process.env.REACT_APP_EMAIL_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, e.target, "ifY7ZX3tF2LqXoD0S").then(res => {
+
+            if (res.status === 200) {
+                toast('Email send completed');
+                e.target.reset()
+            } else {
+
+                toast('something wrong, please try again');
+            }
+
+        })
+
     }
 
     return (
@@ -62,9 +81,8 @@ function MyComponent() {
 
                     <div className='relative lg:w-2/3 w-4/5  textInput '  >
                         <input className=' textIn w-full p-3 border-[1px] bg-inherit rounded-md outline-none text-white transition-all duration-500' type="email" required
-                            name='email'
-                        />
-                        <span className='absolute border-none text-gray-400 left-0 p-3 pointer-events-none uppercase transition-all duration-500 '>Your Email</span>
+                            name='email' />
+                        <span className='absolute border-none text-gray-400 left-0 p-3 pointer-events-none uppercase transition-all duration-500 '>Email</span>
 
                     </div>
 
@@ -73,7 +91,7 @@ function MyComponent() {
                         <textarea className=' textIn w-full lg:max-h-full lg:min-h-[80px] max-h-44 p-3 border-[1px] bg-inherit rounded-md outline-none text-white ' type="text" required
                             name='message'
                         />
-                        <span className='absolute border-none text-gray-400 left-0 p-3 pointer-events-none uppercase transition-all duration-500 '>Your Email</span>
+                        <span className='absolute border-none text-gray-400 left-0 p-3 pointer-events-none uppercase transition-all duration-500 '>Message</span>
 
                     </div>
 
@@ -85,20 +103,19 @@ function MyComponent() {
 
             <div
                 data-aos="zoom-in"
-                className='h-96 rounded-2xl  lg:px-0 px-3 lg:mb-0 mb-10 lg:bg-blue-600 lg:flex-1'>
+                className='h-96 rounded-2xl  lg:px-0 px-3 lg:mb-0 mb-10 lg:flex-1'>
 
-                <div className=' lg: h-full w-full lg:brightness-50 lg:hover:brightness-100 transition-all duration-300'
+                <div className=' lg:w-11/12 mx-auto h-full  lg:brightness-50 lg:hover:brightness-100 transition-all duration-300'
 
                 >
 
                     <LoadScript
-                        googleMapsApiKey={process.env.REACT_APP_MAP_API}
+                        googleMapsApiKey={"AIzaSyABSMtHAhQ4P8y1K9TzdHhgj90vGeTK2Js"}
                     >
                         <GoogleMap
                             mapContainerStyle={containerStyle}
                             center={center}
                             zoom={12.5}
-
                         >
                             { /* Child components, such as markers, info windows, etc. */}
 

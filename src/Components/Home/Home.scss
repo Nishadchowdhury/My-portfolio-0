@@ -53,3 +53,18 @@ h2 {
 .h_f {
     min-height: 100vh;
 }
+
+.text-animate-hover {
+    min-width: 10px;
+    display: inline-block;
+
+    transition: all;
+    transition-duration: 300ms;
+
+    &:hover {
+        transform: scale(0.80);
+        color: var(--MyBlue);
+
+    }
+
+}
