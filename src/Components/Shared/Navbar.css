@@ -4,7 +4,7 @@
     display: block;
     position: relative;
     top: 3%;
-    left: 35%;
+    left: 0%;
     background: var(--MyBlue)(312, 51%, 41%, 0.0);
     cursor: pointer;
     transition: all 300ms cubic-bezier(.9, 0, .33, 1.3);

@@ -31,19 +31,19 @@ const Navbar = () => {
 
     return (
         <section className='lg:hidden fixed z-50 '>
-            <nav class={` ${navOpen.includes('navigation-open') ? 'headerGray' : 'noHeader'} ${header}`}>
+            <nav className={` ${navOpen.includes('navigation-open') ? 'headerGray' : 'noHeader'} ${header}`}>
 
-                <div class={navOpen}>
+                <div className={navOpen}>
 
-                    {/* <section class="logo"></section> */}
+                    {/* <section  className="logo"></section> */}
 
-                    <section onClick={navToggle} class="navigation__icon">
-                        <span class="topBar"></span>
-                        <span class="middleBar"></span>
-                        <span class="bottomBar"></span>
+                    <section onClick={navToggle} className="navigation__icon">
+                        <span className="topBar"></span>
+                        <span className="middleBar"></span>
+                        <span className="bottomBar"></span>
                     </section>
 
-                    <ul class="navigation__ul">
+                    <ul className="navigation__ul">
                         <li onClick={navToggle}><a href="/#home">HOME</a></li>
                         <li onClick={navToggle}><a href="/#Projects">Projects</a></li>
                         <li onClick={navToggle}><a href="/#aboutMe">About Me</a></li>
@@ -68,19 +68,19 @@ const Navbar = () => {
                         </li>
                     </ul>
 
-                    <section class="navigation__social">
-                        <ul class="navigation__social-ul">
+                    <section className="navigation__social">
+                        <ul className="navigation__social-ul">
                             <li>
-                                <a href="" class="social-icon"></a>
+                                <a href="" className="social-icon"></a>
                             </li>
                             <li>
-                                <a href="" class="social-icon"></a>
+                                <a href="" className="social-icon"></a>
                             </li>
                             <li>
-                                <a href="" class="social-icon"></a>
+                                <a href="" className="social-icon"></a>
                             </li>
                             <li>
-                                <a href="" class="social-icon"></a>
+                                <a href="" className="social-icon"></a>
                             </li>
                         </ul>
                     </section>

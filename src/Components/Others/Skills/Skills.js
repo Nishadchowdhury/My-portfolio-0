@@ -19,14 +19,14 @@ const Skills = () => {
         'EXPRESS', 'NoSQL', 'JQUERY'
     ];
 
-    useEffect(() => {
-        const TagCloud = require('TagCloud');
+    // useEffect(() => {
+    //     const TagCloud = require('TagCloud');
 
-        const container = '.tagcloud';
+    //     const container = '.tagcloud';
 
-        TagCloud(container, texts, options);
+    //     TagCloud(container, texts, options);
 
-    }, [])
+    // }, [])
 
     const barParent = 'skill_bar '
 
@@ -71,7 +71,7 @@ const Skills = () => {
                 </div>
 
                 <div className='lg:w-1/2 w-full flex justify-center items-center '  >
-                    <div className="tagcloud"></div>
+                    {/* <div className="tagcloud"></div> */}
                 </div>
 
             </div>

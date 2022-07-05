@@ -1,23 +1,26 @@
-import React, { useEffect } from 'react';
 import BgSvg from '../../../Utils/img/bg.svg'
 import { siteArray } from '../../../Utils/Database/WebSiteData.js'
-import './My_projects.scss'
+import './MyProjects.scss'
 import AOS from 'aos';
+import { useEffect } from 'react';
 
 
-const My_projects = () => {
+const MyProjects = () => {
 
     useEffect(() => {
         AOS.init();
     })
 
+
+
     const SingleSite = ({ Name, img, liveLink, idx }) => {
 
         return (
-            <div className={"_project" + JSON.stringify(idx)}
-                data-aos="fade-up"
-            >
-                <div className=' lg:block hidden grayscale hover:grayscale-0 projectTag h-[500px] mx-auto overflow-y-auto rounded-xl w-[400px] opacity-60 hover:opacity-100 duration-300 ' >
+            <>
+                <div
+                    // data-aos="zoom-in"
+
+                    className='aos-init aos-animate lg:block hidden grayscale hover:grayscale-0 projectTag h-[500px] mx-auto overflow-y-auto rounded-xl w-[400px] opacity-60 hover:opacity-100 transition-all duration-300 ' >
                     <a href={liveLink} target={"_blank"} rel="noreferrer" className='box block'
                         style={{
                             backgroundImage: "url(" + img + ")",
@@ -26,13 +29,16 @@ const My_projects = () => {
                 </div>
 
                 <div className='p-3' >
-                    <div data-aos="fade-in" className=' lg:px-0  lg:hidden scale-95  projectTag max-h-[500px] mx-auto overflow-y-auto rounded-xl max-w-[400px] duration-300 ' >
-                        <a href={liveLink} target={"_blank"} rel="noreferrer" > <img className='' src={img} alt="" /></a>
+                    <div
+                        data-aos="zoom-in"
+
+                        className='aos-init aos-animate  lg:px-0  lg:hidden scale-95  projectTag max-h-[500px] mx-auto overflow-y-auto rounded-xl max-w-[400px] duration-300 ' >
+                        <a href={liveLink} target={"_blank"} rel="noreferrer" > <img src={img} alt="" /></a>
                     </div>
                 </div>
 
 
-            </div>
+            </>
         )
     }
 
@@ -107,4 +113,4 @@ const My_projects = () => {
     );
 };
 
-export default My_projects;
+export default MyProjects;

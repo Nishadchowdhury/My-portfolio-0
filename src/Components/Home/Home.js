@@ -5,12 +5,12 @@ import avatar from '../../Utils/img/avatar.jpg';
 import AnimatedLetters from '../Animation/Font';
 import NavBarTop from '../Shared/NavBarTop';
 import WHAT_I_DO from '../Others/What_i_do/What_i_do';
-import MY_PROJECTS from '../Others/Projects/My_projects';
 import Skills from '../Others/Skills/Skills';
 import AboutMe from '../Others/AboutMe/AboutMe';
 import Footer from '../Others/Footer/Footer';
 import MyLocation from '../Others/MyLocation/MyLocation';
 import { toast } from 'react-toastify';
+import MyProjects from '../Others/Projects/MyProjects';
 const Home = () => {
 
     const [showMore, setShowmore] = useState(0);
@@ -19,7 +19,7 @@ const Home = () => {
 
     const NextDay = (new Date() + "").split(' ');
 
-    console.log(NextDay[2], NextDay[1]);
+    // console.log(NextDay[2], NextDay[1]);
 
     const showRest = () => {
         setHover(1);
@@ -27,6 +27,7 @@ const Home = () => {
             setShowmore(100)
         }, 2000);
     }
+
 
     useEffect(() => {
         setTimeout(() => {
@@ -53,16 +54,20 @@ const Home = () => {
                     >
                         <NavBarTop />
 
+
+
+
+
                         <div
                             onMouseLeave={() => setMySkillAnimate(true)}
                             className="flex justify-center lg:flex-row flex-col lg:pr-16 px-6 my-14 ">
 
 
                             <div className='lg:w-2/5  flex items-center justify-center  ' >
-                                <div className="w-[300px] relative h-[300px] border-8 rounded-full bg-cover "
+                                <div className="w-[300px] relative h-[300px] border-8 rounded-full bg-cover"
                                     style={{ backgroundImage: "url(" + avatar + ")", }}
                                 >
-                                    <span className='inline-block  text-xs lg:text-base lg:-mr-16 -mr-11 absolute rounded-full px-2  bg-gray-400 right-0 ' > Available in {NextDay[2]} {NextDay[1]} </span>
+                                    <span className='available inline-block border-2 border-gray-400 text-xs lg:text-base lg:-mr-16 -mr-9 absolute rounded-full px-2  bg-white right-0' > Available in {NextDay[2]} {NextDay[1]} </span>
                                 </div>
                             </div>
 
@@ -107,13 +112,13 @@ const Home = () => {
 
                                 <Skills MySkillAnimate={MySkillAnimate} />
 
-                                <MY_PROJECTS />
+                                <MyProjects />
 
                                 <MyLocation />
 
                                 <AboutMe />
 
-                                
+
 
                                 <Footer />
                             </>}
