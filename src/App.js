@@ -19,17 +19,16 @@ function App() {
 
 
   const [scrollPosition, setScrollPosition] = useState(true);
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        setScrollPosition(true)
+      } else {
+        setScrollPosition(false)
+      }
+    });
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', () => {
-  //     if (window.scrollY > 200) {
-  //       setScrollPosition(true)
-  //     } else {
-  //       setScrollPosition(false)
-  //     }
-  //   });
-
-  // }, [])
+  }, [])
 
 
   return (
