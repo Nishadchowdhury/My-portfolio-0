@@ -18,7 +18,7 @@ function App() {
   // REACT_APP_EMAIL_TEMPLATE_ID=template_xerrhdm
 
 
-  const [scrollPosition, setScrollPosition] = useState(true);
+  const [scrollPosition, setScrollPosition] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 200) {
@@ -27,7 +27,6 @@ function App() {
         setScrollPosition(false)
       }
     });
-
   }, [])
 
 
