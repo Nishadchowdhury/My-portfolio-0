@@ -1,4 +1,4 @@
-import BgSvg from '../../../Utils/img/bg.svg'
+// import BgSvg from '../../../Utils/img/bg.svg'
 import { siteArray } from '../../../Utils/Database/WebSiteData.js'
 import './MyProjects.scss'
 import AOS from 'aos';
@@ -42,7 +42,7 @@ const MyProjects = () => {
         <div id='My_project'
 
             style={{
-                backgroundImage: `url(${BgSvg})`,
+                // backgroundImage: `url(${BgSvg})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover'
             }}
