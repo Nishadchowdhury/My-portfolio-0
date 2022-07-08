@@ -18,6 +18,28 @@ function App() {
   // REACT_APP_EMAIL_TEMPLATE_ID=template_xerrhdm
 
 
+
+  const [mouseMove, setMouseMove] = useState({
+    x: null,
+    y: null,
+  })
+
+
+  useEffect(() => {
+
+    function handle(e) {
+      setMouseMove({
+        x: e.pageX / 400,
+        y: e.pageY / 400,
+      })
+    }
+
+    document.addEventListener('mousemove', handle)
+    return () => document.removeEventListener(mouseMove, handle)
+
+  })
+
+
   const [scrollPosition, setScrollPosition] = useState(false);
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -41,10 +63,12 @@ function App() {
 
       style={{
         backgroundImage: "url(" + bg + ")",
-        backgroundPosition: 'center',
+        // backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        backgroundPositionX: `${-20 - mouseMove.y}px`,
+        backgroundPositionY: `${-20 - mouseMove.x}px`,
       }} >
 
       <button onClick={GoToTop} className={` z-[999999] scale-0 transition-all duration-200 ${scrollPosition ? ' lg:scale-100' : 'lg:opacity-0'} bottom-14 left-24 fixed rotate-180 py-3 p-4 rounded-2xl border-2 border-gray-400 text-white hover:text-blue-500  `} >
@@ -52,7 +76,7 @@ function App() {
       </button>
       <Routes>
 
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home mouseMoveX={mouseMove.x} mouseMoveY={mouseMove.y} />} />
 
       </Routes>
 

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Home.scss';
-
 import avatar from '../../Utils/img/avatar.jpg';
 import AnimatedLetters from '../Animation/Font';
 import NavBarTop from '../Shared/NavBarTop';
@@ -11,7 +10,11 @@ import Footer from '../Others/Footer/Footer';
 import MyLocation from '../Others/MyLocation/MyLocation';
 import { toast } from 'react-toastify';
 import MyProjects from '../Others/Projects/MyProjects';
-const Home = () => {
+
+
+
+const Home = (mouseMoveX, mouseMoveY) => {
+
 
     const [showMore, setShowmore] = useState(0);
     const [hover, setHover] = useState(0);
@@ -19,7 +22,8 @@ const Home = () => {
 
     const NextDay = (new Date() + "").split(' ');
 
-    // console.log(NextDay[2], NextDay[1]);
+
+    // console.log(mouseMoveX.mouseMoveX, mouseMoveY.mouseMoveY);
 
     const showRest = () => {
         setHover(1);
@@ -54,18 +58,21 @@ const Home = () => {
                     >
                         <NavBarTop />
 
-
-
-
-
                         <div
+                            // ref={ref}
                             onMouseLeave={() => setMySkillAnimate(true)}
                             className="flex justify-center lg:flex-row flex-col lg:pr-16 px-6 my-14 ">
 
 
                             <div className='lg:w-2/5  flex items-center justify-center  ' >
                                 <div className="w-[300px] relative h-[300px] border-8 rounded-full bg-cover"
-                                    style={{ backgroundImage: "url(" + avatar + ")", }}
+                                    style={{
+                                        backgroundImage: "url(" + avatar + ")",
+                                        backgroundPositionX: `${mouseMoveX.mouseMoveX}px`,
+                                        backgroundPositionY: `${mouseMoveY.mouseMoveY}px`,
+                                        backgroundRepeat: `no-repeat`,
+
+                                    }}
                                 >
                                     <span className='available inline-block border-2 border-gray-400 text-xs lg:text-base lg:-mr-16 -mr-9 absolute rounded-full px-2  bg-white right-0' > Available in {NextDay[2]} {NextDay[1]} </span>
                                 </div>
