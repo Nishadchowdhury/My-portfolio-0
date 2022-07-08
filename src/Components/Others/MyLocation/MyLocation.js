@@ -18,7 +18,7 @@ const center = {
     lng: 91.313477
 };
 
-// console.log(process.env.REACT_APP_MAP_API);
+console.log(process.env.REACT_APP_MAP_API);
 
 function MyComponent() {
 
@@ -47,7 +47,6 @@ function MyComponent() {
 
                 toast('something wrong, please try again');
             }
-
         })
 
     }
@@ -110,7 +109,7 @@ function MyComponent() {
                 >
 
                     <LoadScript
-                        googleMapsApiKey={process.env.REACT_APP_MAP_API}
+                        googleMapsApiKey={'AIzaSyBgcL9WlQurkB-kRTgVhM62dKP7c8p1Hl4'}
                     >
                         <GoogleMap
                             mapContainerStyle={containerStyle}

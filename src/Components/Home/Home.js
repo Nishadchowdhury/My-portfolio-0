@@ -31,7 +31,7 @@ const Home = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            toast('click anyware to see more')
+            toast('click anywhere to see more')
         }, 1000);
     }, [])
 

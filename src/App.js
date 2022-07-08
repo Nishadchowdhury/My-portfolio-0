@@ -30,24 +30,26 @@ function App() {
   }, [])
 
 
+
+
+  const GoToTop = () => {
+    window[`scrollTo`]({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <div id='app-home' className='MoveMouse min-h-screen flex lg:bg-blue-700 bg-[#27272A] '
 
       style={{
         backgroundImage: "url(" + bg + ")",
         backgroundPosition: 'center',
-        // backgroundPositionX: `${mouse.x / 120 - 12}px`,
-        // backgroundPositionY: `${mouse.y / 120 - 12}px`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed'
       }} >
 
-      <a href='/#' className={`  opacity-0 transition-all duration-200 ${scrollPosition ? ' lg:opacity-100 ' : 'lg:opacity-0'} bottom-14 left-24 fixed rotate-180 py-3 p-4 rounded-2xl border-2 border-gray-400 text-white hover:text-blue-500  `} >
-
+      <button onClick={GoToTop} className={` z-[999999] scale-0 transition-all duration-200 ${scrollPosition ? ' lg:scale-100' : 'lg:opacity-0'} bottom-14 left-24 fixed rotate-180 py-3 p-4 rounded-2xl border-2 border-gray-400 text-white hover:text-blue-500  `} >
         <FontAwesomeIcon icon={faArrowDown} />
-      </a>
-
+      </button>
       <Routes>
 
         <Route path='/' element={<Home />} />

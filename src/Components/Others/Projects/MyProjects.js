@@ -11,28 +11,23 @@ const MyProjects = () => {
         AOS.init();
     })
 
-
-
     const SingleSite = ({ Name, img, liveLink, idx }) => {
 
         return (
             <>
                 <div
-                    // data-aos="zoom-in"
+                    data-aos="zoom-in"
 
-                    className='aos-init aos-animate lg:block hidden grayscale hover:grayscale-0 projectTag h-[500px] mx-auto overflow-y-auto rounded-xl w-[400px] opacity-60 hover:opacity-100 transition-all duration-300 ' >
-                    <a href={liveLink} target={"_blank"} rel="noreferrer" className='box block'
+                    className=' lg:block hidden projectTag h-[500px] mx-auto overflow-y-auto rounded-xl w-[400px] first-letter:' >
+                    <a href={liveLink} target={"_blank"} rel="noreferrer" className='box block  grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 '
                         style={{
                             backgroundImage: "url(" + img + ")",
                         }}
                     > </a>
                 </div>
 
-                <div className='p-3' >
-                    <div
-                        data-aos="zoom-in"
-
-                        className='aos-init aos-animate  lg:px-0  lg:hidden scale-95  projectTag max-h-[500px] mx-auto overflow-y-auto rounded-xl max-w-[400px] duration-300 ' >
+                <div data-aos="zoom-in" className='p-3' >
+                    <div className=' lg:px-0  lg:hidden scale-95  projectTag max-h-[500px] mx-auto overflow-y-auto rounded-xl max-w-[400px] duration-300 ' >
                         <a href={liveLink} target={"_blank"} rel="noreferrer" > <img src={img} alt="" /></a>
                     </div>
                 </div>
@@ -47,8 +42,9 @@ const MyProjects = () => {
         <div id='My_project'
 
             style={{
-                backgroundImage: "url(" + BgSvg + ")",
-
+                backgroundImage: `url(${BgSvg})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover'
             }}
             className='py-10 ' >
 
@@ -58,7 +54,6 @@ const MyProjects = () => {
                     <span className=" pr-1 inline-block border-b-[3px] pb-2 border-gray-400 pl-1" > Projects </span>
                 </h1>
             </div>
-
 
             <div className='flex lg:justify-around lg:flex-row flex-col relative' >
 
@@ -100,9 +95,6 @@ const MyProjects = () => {
 
                         })
                     }
-
-
-
 
                 </div>
 
