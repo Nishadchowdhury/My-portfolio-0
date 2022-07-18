@@ -29,22 +29,13 @@ function MyComponent() {
 
     const SendEmail = e => {
         e.preventDefault();
-
-        // const name = e.target.name.value;
-        // const email = e.target.email.value;
-        // const message = e.target.message.value;
-
-        // console.log(name, email, message,);
-
         emailjs.init()
-
         emailjs.sendForm(process.env.REACT_APP_EMAIL_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, e.target, "ifY7ZX3tF2LqXoD0S").then(res => {
 
             if (res.status === 200) {
                 toast('Email send completed');
                 e.target.reset()
             } else {
-
                 toast('something wrong, please try again');
             }
         })
@@ -93,12 +84,13 @@ function MyComponent() {
                         <span className='absolute border-none text-gray-400 left-0 p-3 pointer-events-none uppercase transition-all duration-500 '>Message</span>
 
                     </div>
-
-                    <input className='btn  border-2  px-3 py-1 text-white active:scale-95 cursor-pointer  border-blue-500  rounded-xl  transition-all active:opacity-70' type="submit" value="Send" />
+                    <div>
+                        <input className='btn  border-2  px-3 py-1 text-white active:scale-95 cursor-pointer  border-blue-500  rounded-xl  transition-all active:opacity-70' type="submit" value="Send" />
+                    </div>
 
                 </form>
 
-            </div>
+            </div >
 
             <div
                 data-aos="zoom-in"

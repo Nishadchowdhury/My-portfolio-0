@@ -4,6 +4,7 @@ import './MyProjects.scss'
 import AOS from 'aos';
 import { useEffect } from 'react';
 import SingleSite from './SingleSite.js';
+import BgSvg from '../../../Utils/img/bg.svg'
 
 
 const MyProjects = () => {
@@ -12,20 +13,14 @@ const MyProjects = () => {
         AOS.init();
     })
 
-    // const SingleSite = ({ Name, img, liveLink, idx }) => {
-
-    //     return (
-    //         <>
-
-
-
-    //         </>
-    //     )
-    // }
-
-
     return (
         <div id='My_project'
+
+            style={{
+                backgroundImage: `url(${BgSvg})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover'
+            }}
 
 
             className='py-10 ' >

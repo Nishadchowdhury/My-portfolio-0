@@ -1,17 +1,9 @@
 import React from 'react';
-import BgSvg from '../../../Utils/img/bg.svg'
+
 
 const SingleSite = ({ Name, img, liveLink, idx, aosData }) => {
     return (
-        <div
-
-            style={{
-                backgroundImage: `url(${BgSvg})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover'
-            }}
-
-        >
+        <div  >
             <div
 
                 data-aos={aosData}
